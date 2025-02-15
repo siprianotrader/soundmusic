@@ -12,6 +12,7 @@
   "description": "",
   "type": "module",
   "dependencies": {
+    "app": "file:..",
     "cors": "^2.8.5",
     "deploy": "file:..",
     "express": "^4.21.2",
