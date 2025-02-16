@@ -8,7 +8,7 @@ const URI =
 
 const client = new MongoClient(URI);
 
-export const db = client.db("Sound");
-// const songCollection = await db.collection("songs").find({}).toArray();
+export const db = client.db("sound");
+// const songsCollection = await db.collection("songs").find({}).toArray();
 
-// console.log(songCollection);
+// console.log(songsCollection);

@@ -9,7 +9,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "type": "module",
   "dependencies": {
     "app": "file:..",
@@ -18,5 +17,6 @@
     "express": "^4.21.2",
     "mongodb": "^6.13.0",
     "path": "^0.12.7"
-  }
+  },
+  "description": ""
 }
