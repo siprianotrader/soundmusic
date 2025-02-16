@@ -19,6 +19,9 @@ export default App2;
 // Nomeação de Variavel, Função...
 // camelCase
 
+// Nomeação de classes
+// kebab-case
+
 // export default, posso importar com qualquer nome e sem chaves
 // export "sem default", só posso importar entre chaves e com o nome exportado
 
@@ -84,3 +87,8 @@ export default App2;
 
 // Spread operator
 // ...
+
+// Quando componentes se re-renderizão?
+// Uma das ocasiões é quando uma variável de estado usada por esse componente é atualizada
+
+// Hook - useState
