@@ -6,33 +6,28 @@ import { artistArray } from "../assets/database/artists";
 
 const Song = () => {
   const { id } = useParams();
-  // console.log(id);
 
-  const { image, name, duration, artist, audio } = songsArray.filter(
-    (currentSongObj) => currentSongObj._id === id
-  )[0];
-  // console.log(songObj);
+  // Encontra a música atual com base no ID
+  const { image, name, duration, artist, audio } = songsArray.find(
+    (currentSongObj) => currentSongObj.id === Number(id)
+  );
 
-  const artistObj = artistArray.filter(
+  // Encontra o artista da música atual
+  const artistObj = artistArray.find(
     (currentArtistObj) => currentArtistObj.name === artist
-  )[0];
-  // console.log(artistObj);
+  );
 
+  // Filtra as músicas do mesmo artista
   const songsArrayFromArtist = songsArray.filter(
     (currentSongObj) => currentSongObj.artist === artist
   );
-  // console.log(songsArrayFromArtist);
 
-  const randomIndex = Math.floor(
-    Math.random() * (songsArrayFromArtist.length - 1)
-  );
+  // Gera IDs aleatórios para as músicas do mesmo artista
+  const randomIndex = Math.floor(Math.random() * songsArrayFromArtist.length);
+  const randomIndex2 = Math.floor(Math.random() * songsArrayFromArtist.length);
 
-  const randomIndex2 = Math.floor(
-    Math.random() * (songsArrayFromArtist.length - 1)
-  );
-
-  const randomIdFromArtist = songsArrayFromArtist[randomIndex]._id;
-  const randomId2FromArtist = songsArrayFromArtist[randomIndex2]._id;
+  const randomIdFromArtist = songsArrayFromArtist[randomIndex].id;
+  const randomId2FromArtist = songsArrayFromArtist[randomIndex2].id;
 
   return (
     <div className="song">
@@ -43,7 +38,7 @@ const Song = () => {
       </div>
 
       <div className="song__bar">
-        <Link to={`/artist/${artistObj._id}`} className="song__artist-image">
+        <Link to={`/artist/${artistObj.id}`} className="song__artist-image">
           <img
             width={75}
             height={75}
@@ -52,11 +47,12 @@ const Song = () => {
           />
         </Link>
 
+        {/* Passa o arquivo de áudio e a duração para o Player */}
         <Player
+          audio={audio}
           duration={duration}
           randomIdFromArtist={randomIdFromArtist}
           randomId2FromArtist={randomId2FromArtist}
-          audio={audio}
         />
 
         <div>
