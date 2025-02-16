@@ -1,16 +1,16 @@
 import React from "react";
-import logosound from "../assets/logo/logo-sound.png"
+import logoSpotify from "../assets/logo/spotify-logo.png";
 import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <div className="header">
       <Link to="/">
-        <img src={logosound} alt="Logo do Sound" />
+        <img src={logoSpotify} alt="Logo do Spotify" />
       </Link>
 
       <Link to="/" className="header__link">
-        <h1>Sound Music</h1>
+        <h1>Spotify</h1>
       </Link>
     </div>
   );
