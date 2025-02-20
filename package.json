@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fullstackjornada/deploy-jornada-full-stack.git"
+    "url": "git+https://github.com/siprianotrader/soundmusic.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fullstackjornada/deploy-jornada-full-stack/issues"
+    "url": "https://github.com/siprianotrader/soundmusic/issues"
   },
-  "homepage": "https://github.com/fullstackjornada/deploy-jornada-full-stack#readme",
+  "homepage": "https://github.com/siprianotrader/soundmusic#readme",
   "description": ""
 }
